@@ -1,0 +1,79 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	padding: 40px;
+}
+
+.moviesearch-title {
+	text-align: center;
+	font-size: 40px;
+	font-weight: 100;
+	letter-spacing: 8px;
+	margin: 0 auto 20px;
+	text-transform: uppercase;
+}
+
+.moviesearch-input {
+	display: block;
+	width: 400px;
+	margin: 0 auto 40px;
+	padding: 0 8px;
+	height: 48px;
+	font-size: 22px;
+	font-weight: 300;
+}
+
+.moviesearch-movie {
+	max-width: 720px;
+	margin: 0 auto;
+}
+
+.moviesearch-movie-poster {
+	float: left;
+	width: 35%;
+	margin-right: 5%;
+}
+
+.moviesearch-movie-info {
+	float: left;
+	width: 60%;
+}
+
+.moviesearch-movie-info-title {
+	font-size: 32px;
+	font-weight: bold;
+	margin-bottom: 8px;
+}
+
+.moviesearch-movie-info-year {
+	font-style: italic;
+	color: #AAA;
+	font-size: 12px;
+	margin-bottom: 20px;
+}
+
+.moviesearch-movie-info-plot {
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+
+.moviesearch-movie-info-director,
+.moviesearch-movie-info-actors {
+	font-size: 14px;
+}
+
+.moviesearch-movie-info-director {
+	margin-bottom: 5px;
+}
+
+.moviesearch-movie-info-actors {
+	margin-bottom: 15px;
+}
+
+.moviesearch-movie-info-genres {
+	font-size: 12px;
+	color: #AAA;
+}
