@@ -1,3 +1,5 @@
+/* globals $ */
+
 var MovieSearch = {
 	dom: {},
 	activeMovie: null,
@@ -32,24 +34,24 @@ var MovieSearch = {
 		}
 
 		$.ajax({
-	    url: "http://omdbapi.com",
-	    data: { t: title },
-	    dataType: "json",
-	    success: function(res) {
-				if (res.Error) {
-					this.activeMovie = null;
-				}
-				else {
-					this.activeMovie = res;
-				}
-
-				this.render();
-	    }.bind(this),
-			error: function() {
+			url: "http://omdbapi.com",
+			data: { t: title },
+			dataType: "json",
+		})
+		.then(function(res) {
+			if (res.Error) {
 				this.activeMovie = null;
-				this.render();
-			}.bind(this),
-	  });
+			}
+			else {
+				this.activeMovie = res;
+			}
+
+			this.render();
+		}.bind(this))
+		.catch(function() {
+			this.activeMovie = null;
+			this.render();
+		}.bind(this));
 	},
 
 	render: function() {

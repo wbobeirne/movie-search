@@ -1,3 +1,5 @@
+/* globals $ */
+
 $(document).ready(function() {
 	var $input = $(".moviesearch-input");
 	var $poster = $(".moviesearch-movie-poster");
@@ -17,10 +19,10 @@ $(document).ready(function() {
 		}
 
 		$.ajax({
-	    url: "http://omdbapi.com",
-	    data: { t: title },
-	    dataType: "json",
-	    success: function(res) {
+			url: "http://omdbapi.com",
+			data: { t: title },
+			dataType: "json",
+			success: function(res) {
 				if (!res.Error) {
 					// Input the movie in to all elements
 					$poster.attr("src", res.Poster);
@@ -41,7 +43,7 @@ $(document).ready(function() {
 					$actors.html("");
 					$genres.html("");
 				}
-	    },
-	  });
+			},
+		});
 	});
 });
